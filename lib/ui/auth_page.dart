@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fit_test_task/api/google_auth_api.dart';
 import 'package:flutter/services.dart';
 
 class AuthPage extends StatefulWidget {
@@ -7,7 +6,7 @@ class AuthPage extends StatefulWidget {
 }
 
 class _AuthPageState extends State<AuthPage> {
-  static const platform = MethodChannel('samples.flutter.dev/battery');
+  static const platform = MethodChannel('auth_google');
   @override
   Widget build(BuildContext context) {
     final _size = MediaQuery.of(context).size;
@@ -37,7 +36,14 @@ class _AuthPageState extends State<AuthPage> {
                 ),
                 FilledButton(
                   onPressed:() async {
-                    googleSignIn();
+                    final int result = await platform.invokeMethod('signIn');
+                    if (result == 1)
+                      {
+                        print('Вошли успешно');
+                      }
+                    else {
+                      print('problems');
+                    }
                   },
                   child: Text('Войти с помощью google'),
                 ),
@@ -48,21 +54,4 @@ class _AuthPageState extends State<AuthPage> {
       ),
     );
   }
-}
-
-Future googleSignIn() async 
-{
-  GoogleAuthApi api = GoogleAuthApi();
-  bool _isAuth = await api.isLogedIn();
-  if (!_isAuth) 
-  {
-    await api.login();
-    print(await api.handleScopes());
-  }
-  else 
-  {
-    await api.handleScopes();
-    await api.logout();
-  }
-  
 }

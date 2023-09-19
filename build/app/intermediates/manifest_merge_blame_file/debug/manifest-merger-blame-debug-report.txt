@@ -15,147 +15,155 @@
 15    <uses-permission android:name="android.permission.INTERNET" />
 15-->D:\vsc_project\google_fit_test_task\android\app\src\debug\AndroidManifest.xml:6:5-66
 15-->D:\vsc_project\google_fit_test_task\android\app\src\debug\AndroidManifest.xml:6:22-64
-16    <uses-permission android:name="android.permission.health.READ_HEART_RATE" />
-16-->D:\vsc_project\google_fit_test_task\android\app\src\debug\AndroidManifest.xml:7:5-80
-16-->D:\vsc_project\google_fit_test_task\android\app\src\debug\AndroidManifest.xml:7:22-78
-17    <uses-permission android:name="android.permission.health.WRITE_HEART_RATE" />
-17-->D:\vsc_project\google_fit_test_task\android\app\src\debug\AndroidManifest.xml:8:5-81
-17-->D:\vsc_project\google_fit_test_task\android\app\src\debug\AndroidManifest.xml:8:22-79
-18    <uses-permission android:name="android.permission.health.READ_STEPS" />
-18-->D:\vsc_project\google_fit_test_task\android\app\src\debug\AndroidManifest.xml:9:5-75
-18-->D:\vsc_project\google_fit_test_task\android\app\src\debug\AndroidManifest.xml:9:22-73
-19    <uses-permission android:name="android.permission.health.WRITE_STEPS" />
-19-->D:\vsc_project\google_fit_test_task\android\app\src\debug\AndroidManifest.xml:10:5-76
-19-->D:\vsc_project\google_fit_test_task\android\app\src\debug\AndroidManifest.xml:10:22-74
-20
-21    <permission
-21-->[androidx.core:core:1.12.0-alpha05] C:\Users\ifigu\.gradle\caches\transforms-3\c198300d98a97702d7c009b7795033c2\transformed\core-1.12.0-alpha05\AndroidManifest.xml:22:5-24:47
-22        android:name="com.example.google_fit_test_task.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
-22-->[androidx.core:core:1.12.0-alpha05] C:\Users\ifigu\.gradle\caches\transforms-3\c198300d98a97702d7c009b7795033c2\transformed\core-1.12.0-alpha05\AndroidManifest.xml:23:9-81
-23        android:protectionLevel="signature" />
-23-->[androidx.core:core:1.12.0-alpha05] C:\Users\ifigu\.gradle\caches\transforms-3\c198300d98a97702d7c009b7795033c2\transformed\core-1.12.0-alpha05\AndroidManifest.xml:24:9-44
-24
-25    <uses-permission android:name="com.example.google_fit_test_task.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
-25-->[androidx.core:core:1.12.0-alpha05] C:\Users\ifigu\.gradle\caches\transforms-3\c198300d98a97702d7c009b7795033c2\transformed\core-1.12.0-alpha05\AndroidManifest.xml:26:5-97
-25-->[androidx.core:core:1.12.0-alpha05] C:\Users\ifigu\.gradle\caches\transforms-3\c198300d98a97702d7c009b7795033c2\transformed\core-1.12.0-alpha05\AndroidManifest.xml:26:22-94
+16    <uses-permission android:name="android.permission.BODY_SENSORS" />
+16-->D:\vsc_project\google_fit_test_task\android\app\src\debug\AndroidManifest.xml:7:5-70
+16-->D:\vsc_project\google_fit_test_task\android\app\src\debug\AndroidManifest.xml:7:22-68
+17    <uses-permission android:name="android.permission.ACTIVITY_RECOGNITION" />
+17-->D:\vsc_project\google_fit_test_task\android\app\src\debug\AndroidManifest.xml:8:5-78
+17-->D:\vsc_project\google_fit_test_task\android\app\src\debug\AndroidManifest.xml:8:22-76
+18
+19    <queries>
+19-->D:\vsc_project\google_fit_test_task\android\app\src\main\AndroidManifest.xml:34:5-36:15
+20        <package android:name="com.google.android.apps.healthdata" />
+20-->D:\vsc_project\google_fit_test_task\android\app\src\main\AndroidManifest.xml:35:9-70
+20-->D:\vsc_project\google_fit_test_task\android\app\src\main\AndroidManifest.xml:35:18-67
+21    </queries>
+22
+23    <permission
+23-->[androidx.core:core:1.9.0] C:\Users\ifigu\.gradle\caches\transforms-3\1c51a8f9e5573933d27f889e648896a7\transformed\core-1.9.0\AndroidManifest.xml:22:5-24:47
+24        android:name="com.example.google_fit_test_task.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+24-->[androidx.core:core:1.9.0] C:\Users\ifigu\.gradle\caches\transforms-3\1c51a8f9e5573933d27f889e648896a7\transformed\core-1.9.0\AndroidManifest.xml:23:9-81
+25        android:protectionLevel="signature" />
+25-->[androidx.core:core:1.9.0] C:\Users\ifigu\.gradle\caches\transforms-3\1c51a8f9e5573933d27f889e648896a7\transformed\core-1.9.0\AndroidManifest.xml:24:9-44
 26
-27    <application
-28        android:name="android.app.Application"
-29        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-29-->[androidx.core:core:1.12.0-alpha05] C:\Users\ifigu\.gradle\caches\transforms-3\c198300d98a97702d7c009b7795033c2\transformed\core-1.12.0-alpha05\AndroidManifest.xml:28:18-86
-30        android:debuggable="true"
-31        android:extractNativeLibs="false"
-32        android:icon="@mipmap/ic_launcher"
-33        android:label="google_fit_test_task" >
-34        <activity
-35            android:name="com.example.google_fit_test_task.MainActivity"
-36            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
-37            android:exported="true"
-38            android:hardwareAccelerated="true"
-39            android:launchMode="singleTop"
-40            android:theme="@style/LaunchTheme"
-41            android:windowSoftInputMode="adjustResize" >
-42
-43            <!--
-44                 Specifies an Android theme to apply to this Activity as soon as
-45                 the Android process has started. This theme is visible to the user
-46                 while the Flutter UI initializes. After that, this theme continues
-47                 to determine the Window background behind the Flutter UI.
-48            -->
-49            <meta-data
-50                android:name="io.flutter.embedding.android.NormalTheme"
-51                android:resource="@style/NormalTheme" />
-52
-53            <intent-filter>
-54                <action android:name="android.intent.action.MAIN" />
-55
-56                <category android:name="android.intent.category.LAUNCHER" />
-57            </intent-filter>
-58        </activity>
-59        <!--
-60             Don't delete the meta-data below.
-61             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java
-62        -->
-63        <meta-data
-64            android:name="flutterEmbedding"
-65            android:value="2" />
-66
-67        <service
-67-->[androidx.health.connect:connect-client:1.1.0-alpha04] C:\Users\ifigu\.gradle\caches\transforms-3\85d1b8e48241b045cedd6a94185fae93\transformed\jetified-connect-client-1.1.0-alpha04\AndroidManifest.xml:24:9-32:19
-68            android:name="androidx.health.platform.client.impl.sdkservice.HealthDataSdkService"
-68-->[androidx.health.connect:connect-client:1.1.0-alpha04] C:\Users\ifigu\.gradle\caches\transforms-3\85d1b8e48241b045cedd6a94185fae93\transformed\jetified-connect-client-1.1.0-alpha04\AndroidManifest.xml:25:13-96
-69            android:enabled="true"
-69-->[androidx.health.connect:connect-client:1.1.0-alpha04] C:\Users\ifigu\.gradle\caches\transforms-3\85d1b8e48241b045cedd6a94185fae93\transformed\jetified-connect-client-1.1.0-alpha04\AndroidManifest.xml:26:13-35
-70            android:exported="true" >
-70-->[androidx.health.connect:connect-client:1.1.0-alpha04] C:\Users\ifigu\.gradle\caches\transforms-3\85d1b8e48241b045cedd6a94185fae93\transformed\jetified-connect-client-1.1.0-alpha04\AndroidManifest.xml:27:13-36
-71            <intent-filter>
-71-->[androidx.health.connect:connect-client:1.1.0-alpha04] C:\Users\ifigu\.gradle\caches\transforms-3\85d1b8e48241b045cedd6a94185fae93\transformed\jetified-connect-client-1.1.0-alpha04\AndroidManifest.xml:29:13-31:29
-72                <action android:name="androidx.health.platform.client.ACTION_BIND_SDK_SERVICE" />
-72-->[androidx.health.connect:connect-client:1.1.0-alpha04] C:\Users\ifigu\.gradle\caches\transforms-3\85d1b8e48241b045cedd6a94185fae93\transformed\jetified-connect-client-1.1.0-alpha04\AndroidManifest.xml:30:17-98
-72-->[androidx.health.connect:connect-client:1.1.0-alpha04] C:\Users\ifigu\.gradle\caches\transforms-3\85d1b8e48241b045cedd6a94185fae93\transformed\jetified-connect-client-1.1.0-alpha04\AndroidManifest.xml:30:25-95
-73            </intent-filter>
-74        </service>
-75
-76        <activity
-76-->[com.google.android.gms:play-services-auth:20.7.0] C:\Users\ifigu\.gradle\caches\transforms-3\2524147fbfd3c89362905112903bb3a3\transformed\jetified-play-services-auth-20.7.0\AndroidManifest.xml:23:9-27:75
-77            android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
-77-->[com.google.android.gms:play-services-auth:20.7.0] C:\Users\ifigu\.gradle\caches\transforms-3\2524147fbfd3c89362905112903bb3a3\transformed\jetified-play-services-auth-20.7.0\AndroidManifest.xml:24:13-93
-78            android:excludeFromRecents="true"
-78-->[com.google.android.gms:play-services-auth:20.7.0] C:\Users\ifigu\.gradle\caches\transforms-3\2524147fbfd3c89362905112903bb3a3\transformed\jetified-play-services-auth-20.7.0\AndroidManifest.xml:25:13-46
-79            android:exported="false"
-79-->[com.google.android.gms:play-services-auth:20.7.0] C:\Users\ifigu\.gradle\caches\transforms-3\2524147fbfd3c89362905112903bb3a3\transformed\jetified-play-services-auth-20.7.0\AndroidManifest.xml:26:13-37
-80            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-80-->[com.google.android.gms:play-services-auth:20.7.0] C:\Users\ifigu\.gradle\caches\transforms-3\2524147fbfd3c89362905112903bb3a3\transformed\jetified-play-services-auth-20.7.0\AndroidManifest.xml:27:13-72
-81        <!--
-82            Service handling Google Sign-In user revocation. For apps that do not integrate with
-83            Google Sign-In, this service will never be started.
-84        -->
-85        <service
-85-->[com.google.android.gms:play-services-auth:20.7.0] C:\Users\ifigu\.gradle\caches\transforms-3\2524147fbfd3c89362905112903bb3a3\transformed\jetified-play-services-auth-20.7.0\AndroidManifest.xml:33:9-37:51
-86            android:name="com.google.android.gms.auth.api.signin.RevocationBoundService"
-86-->[com.google.android.gms:play-services-auth:20.7.0] C:\Users\ifigu\.gradle\caches\transforms-3\2524147fbfd3c89362905112903bb3a3\transformed\jetified-play-services-auth-20.7.0\AndroidManifest.xml:34:13-89
-87            android:exported="true"
-87-->[com.google.android.gms:play-services-auth:20.7.0] C:\Users\ifigu\.gradle\caches\transforms-3\2524147fbfd3c89362905112903bb3a3\transformed\jetified-play-services-auth-20.7.0\AndroidManifest.xml:35:13-36
-88            android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION"
-88-->[com.google.android.gms:play-services-auth:20.7.0] C:\Users\ifigu\.gradle\caches\transforms-3\2524147fbfd3c89362905112903bb3a3\transformed\jetified-play-services-auth-20.7.0\AndroidManifest.xml:36:13-107
-89            android:visibleToInstantApps="true" />
-89-->[com.google.android.gms:play-services-auth:20.7.0] C:\Users\ifigu\.gradle\caches\transforms-3\2524147fbfd3c89362905112903bb3a3\transformed\jetified-play-services-auth-20.7.0\AndroidManifest.xml:37:13-48
-90
-91        <meta-data
-91-->[com.google.android.gms:play-services-fitness:21.1.0] C:\Users\ifigu\.gradle\caches\transforms-3\dd50eccf9b2f7752a837d1b53077d362\transformed\jetified-play-services-fitness-21.1.0\AndroidManifest.xml:23:9-25:38
-92            android:name="com.google.gms.fitness.sdk.version"
-92-->[com.google.android.gms:play-services-fitness:21.1.0] C:\Users\ifigu\.gradle\caches\transforms-3\dd50eccf9b2f7752a837d1b53077d362\transformed\jetified-play-services-fitness-21.1.0\AndroidManifest.xml:24:13-62
-93            android:value="21.1.0" />
-93-->[com.google.android.gms:play-services-fitness:21.1.0] C:\Users\ifigu\.gradle\caches\transforms-3\dd50eccf9b2f7752a837d1b53077d362\transformed\jetified-play-services-fitness-21.1.0\AndroidManifest.xml:25:13-35
-94
-95        <activity
-95-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\ifigu\.gradle\caches\transforms-3\e8a7b48145244c4615d52153508b8ec1\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:20:9-22:45
-96            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-96-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\ifigu\.gradle\caches\transforms-3\e8a7b48145244c4615d52153508b8ec1\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:20:19-85
-97            android:exported="false"
-97-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\ifigu\.gradle\caches\transforms-3\e8a7b48145244c4615d52153508b8ec1\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:22:19-43
-98            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-98-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\ifigu\.gradle\caches\transforms-3\e8a7b48145244c4615d52153508b8ec1\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:21:19-78
-99
-100        <meta-data
-100-->[com.google.android.gms:play-services-basement:18.2.0] C:\Users\ifigu\.gradle\caches\transforms-3\eb608a949860c2ad081836602d0b2ff3\transformed\jetified-play-services-basement-18.2.0\AndroidManifest.xml:21:9-23:69
-101            android:name="com.google.android.gms.version"
-101-->[com.google.android.gms:play-services-basement:18.2.0] C:\Users\ifigu\.gradle\caches\transforms-3\eb608a949860c2ad081836602d0b2ff3\transformed\jetified-play-services-basement-18.2.0\AndroidManifest.xml:22:13-58
-102            android:value="@integer/google_play_services_version" />
-102-->[com.google.android.gms:play-services-basement:18.2.0] C:\Users\ifigu\.gradle\caches\transforms-3\eb608a949860c2ad081836602d0b2ff3\transformed\jetified-play-services-basement-18.2.0\AndroidManifest.xml:23:13-66
-103
-104        <uses-library
-104-->[androidx.window:window:1.0.0-beta04] C:\Users\ifigu\.gradle\caches\transforms-3\d035540ab5f21da1680139de3043fa0c\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:25:9-27:40
-105            android:name="androidx.window.extensions"
-105-->[androidx.window:window:1.0.0-beta04] C:\Users\ifigu\.gradle\caches\transforms-3\d035540ab5f21da1680139de3043fa0c\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:26:13-54
-106            android:required="false" />
-106-->[androidx.window:window:1.0.0-beta04] C:\Users\ifigu\.gradle\caches\transforms-3\d035540ab5f21da1680139de3043fa0c\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:27:13-37
-107        <uses-library
-107-->[androidx.window:window:1.0.0-beta04] C:\Users\ifigu\.gradle\caches\transforms-3\d035540ab5f21da1680139de3043fa0c\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:28:9-30:40
-108            android:name="androidx.window.sidecar"
-108-->[androidx.window:window:1.0.0-beta04] C:\Users\ifigu\.gradle\caches\transforms-3\d035540ab5f21da1680139de3043fa0c\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:29:13-51
-109            android:required="false" />
-109-->[androidx.window:window:1.0.0-beta04] C:\Users\ifigu\.gradle\caches\transforms-3\d035540ab5f21da1680139de3043fa0c\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:30:13-37
-110    </application>
-111
-112</manifest>
+27    <uses-permission android:name="com.example.google_fit_test_task.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+27-->[androidx.core:core:1.9.0] C:\Users\ifigu\.gradle\caches\transforms-3\1c51a8f9e5573933d27f889e648896a7\transformed\core-1.9.0\AndroidManifest.xml:26:5-97
+27-->[androidx.core:core:1.9.0] C:\Users\ifigu\.gradle\caches\transforms-3\1c51a8f9e5573933d27f889e648896a7\transformed\core-1.9.0\AndroidManifest.xml:26:22-94
+28
+29    <application
+30        android:name="android.app.Application"
+31        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+31-->[androidx.core:core:1.9.0] C:\Users\ifigu\.gradle\caches\transforms-3\1c51a8f9e5573933d27f889e648896a7\transformed\core-1.9.0\AndroidManifest.xml:28:18-86
+32        android:debuggable="true"
+33        android:extractNativeLibs="false"
+34        android:icon="@mipmap/ic_launcher"
+35        android:label="google_fit_test_task" >
+36        <activity
+37            android:name="com.example.google_fit_test_task.MainActivity"
+38            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
+39            android:exported="true"
+40            android:hardwareAccelerated="true"
+41            android:launchMode="singleTop"
+42            android:theme="@style/LaunchTheme"
+43            android:windowSoftInputMode="adjustResize" >
+44
+45            <!--
+46                 Specifies an Android theme to apply to this Activity as soon as
+47                 the Android process has started. This theme is visible to the user
+48                 while the Flutter UI initializes. After that, this theme continues
+49                 to determine the Window background behind the Flutter UI.
+50            -->
+51            <meta-data
+52                android:name="io.flutter.embedding.android.NormalTheme"
+53                android:resource="@style/NormalTheme" />
+54
+55            <intent-filter>
+56                <action android:name="android.intent.action.MAIN" />
+57
+58                <category android:name="android.intent.category.LAUNCHER" />
+59            </intent-filter>
+60        </activity>
+61
+62        <!--
+63             Don't delete the meta-data below.
+64             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java
+65        -->
+66        <meta-data
+67            android:name="flutterEmbedding"
+68            android:value="2" />
+69
+70        <activity
+70-->[com.google.android.gms:play-services-auth:20.7.0] C:\Users\ifigu\.gradle\caches\transforms-3\2524147fbfd3c89362905112903bb3a3\transformed\jetified-play-services-auth-20.7.0\AndroidManifest.xml:23:9-27:75
+71            android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
+71-->[com.google.android.gms:play-services-auth:20.7.0] C:\Users\ifigu\.gradle\caches\transforms-3\2524147fbfd3c89362905112903bb3a3\transformed\jetified-play-services-auth-20.7.0\AndroidManifest.xml:24:13-93
+72            android:excludeFromRecents="true"
+72-->[com.google.android.gms:play-services-auth:20.7.0] C:\Users\ifigu\.gradle\caches\transforms-3\2524147fbfd3c89362905112903bb3a3\transformed\jetified-play-services-auth-20.7.0\AndroidManifest.xml:25:13-46
+73            android:exported="false"
+73-->[com.google.android.gms:play-services-auth:20.7.0] C:\Users\ifigu\.gradle\caches\transforms-3\2524147fbfd3c89362905112903bb3a3\transformed\jetified-play-services-auth-20.7.0\AndroidManifest.xml:26:13-37
+74            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+74-->[com.google.android.gms:play-services-auth:20.7.0] C:\Users\ifigu\.gradle\caches\transforms-3\2524147fbfd3c89362905112903bb3a3\transformed\jetified-play-services-auth-20.7.0\AndroidManifest.xml:27:13-72
+75        <!--
+76            Service handling Google Sign-In user revocation. For apps that do not integrate with
+77            Google Sign-In, this service will never be started.
+78        -->
+79        <service
+79-->[com.google.android.gms:play-services-auth:20.7.0] C:\Users\ifigu\.gradle\caches\transforms-3\2524147fbfd3c89362905112903bb3a3\transformed\jetified-play-services-auth-20.7.0\AndroidManifest.xml:33:9-37:51
+80            android:name="com.google.android.gms.auth.api.signin.RevocationBoundService"
+80-->[com.google.android.gms:play-services-auth:20.7.0] C:\Users\ifigu\.gradle\caches\transforms-3\2524147fbfd3c89362905112903bb3a3\transformed\jetified-play-services-auth-20.7.0\AndroidManifest.xml:34:13-89
+81            android:exported="true"
+81-->[com.google.android.gms:play-services-auth:20.7.0] C:\Users\ifigu\.gradle\caches\transforms-3\2524147fbfd3c89362905112903bb3a3\transformed\jetified-play-services-auth-20.7.0\AndroidManifest.xml:35:13-36
+82            android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION"
+82-->[com.google.android.gms:play-services-auth:20.7.0] C:\Users\ifigu\.gradle\caches\transforms-3\2524147fbfd3c89362905112903bb3a3\transformed\jetified-play-services-auth-20.7.0\AndroidManifest.xml:36:13-107
+83            android:visibleToInstantApps="true" />
+83-->[com.google.android.gms:play-services-auth:20.7.0] C:\Users\ifigu\.gradle\caches\transforms-3\2524147fbfd3c89362905112903bb3a3\transformed\jetified-play-services-auth-20.7.0\AndroidManifest.xml:37:13-48
+84
+85        <meta-data
+85-->[com.google.android.gms:play-services-fitness:21.1.0] C:\Users\ifigu\.gradle\caches\transforms-3\dd50eccf9b2f7752a837d1b53077d362\transformed\jetified-play-services-fitness-21.1.0\AndroidManifest.xml:23:9-25:38
+86            android:name="com.google.gms.fitness.sdk.version"
+86-->[com.google.android.gms:play-services-fitness:21.1.0] C:\Users\ifigu\.gradle\caches\transforms-3\dd50eccf9b2f7752a837d1b53077d362\transformed\jetified-play-services-fitness-21.1.0\AndroidManifest.xml:24:13-62
+87            android:value="21.1.0" />
+87-->[com.google.android.gms:play-services-fitness:21.1.0] C:\Users\ifigu\.gradle\caches\transforms-3\dd50eccf9b2f7752a837d1b53077d362\transformed\jetified-play-services-fitness-21.1.0\AndroidManifest.xml:25:13-35
+88
+89        <activity
+89-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\ifigu\.gradle\caches\transforms-3\e8a7b48145244c4615d52153508b8ec1\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:20:9-22:45
+90            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+90-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\ifigu\.gradle\caches\transforms-3\e8a7b48145244c4615d52153508b8ec1\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:20:19-85
+91            android:exported="false"
+91-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\ifigu\.gradle\caches\transforms-3\e8a7b48145244c4615d52153508b8ec1\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:22:19-43
+92            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+92-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\ifigu\.gradle\caches\transforms-3\e8a7b48145244c4615d52153508b8ec1\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:21:19-78
+93
+94        <meta-data
+94-->[com.google.android.gms:play-services-basement:18.2.0] C:\Users\ifigu\.gradle\caches\transforms-3\eb608a949860c2ad081836602d0b2ff3\transformed\jetified-play-services-basement-18.2.0\AndroidManifest.xml:21:9-23:69
+95            android:name="com.google.android.gms.version"
+95-->[com.google.android.gms:play-services-basement:18.2.0] C:\Users\ifigu\.gradle\caches\transforms-3\eb608a949860c2ad081836602d0b2ff3\transformed\jetified-play-services-basement-18.2.0\AndroidManifest.xml:22:13-58
+96            android:value="@integer/google_play_services_version" />
+96-->[com.google.android.gms:play-services-basement:18.2.0] C:\Users\ifigu\.gradle\caches\transforms-3\eb608a949860c2ad081836602d0b2ff3\transformed\jetified-play-services-basement-18.2.0\AndroidManifest.xml:23:13-66
+97
+98        <uses-library
+98-->[androidx.window:window:1.0.0-beta04] C:\Users\ifigu\.gradle\caches\transforms-3\d035540ab5f21da1680139de3043fa0c\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:25:9-27:40
+99            android:name="androidx.window.extensions"
+99-->[androidx.window:window:1.0.0-beta04] C:\Users\ifigu\.gradle\caches\transforms-3\d035540ab5f21da1680139de3043fa0c\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:26:13-54
+100            android:required="false" />
+100-->[androidx.window:window:1.0.0-beta04] C:\Users\ifigu\.gradle\caches\transforms-3\d035540ab5f21da1680139de3043fa0c\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:27:13-37
+101        <uses-library
+101-->[androidx.window:window:1.0.0-beta04] C:\Users\ifigu\.gradle\caches\transforms-3\d035540ab5f21da1680139de3043fa0c\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:28:9-30:40
+102            android:name="androidx.window.sidecar"
+102-->[androidx.window:window:1.0.0-beta04] C:\Users\ifigu\.gradle\caches\transforms-3\d035540ab5f21da1680139de3043fa0c\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:29:13-51
+103            android:required="false" />
+103-->[androidx.window:window:1.0.0-beta04] C:\Users\ifigu\.gradle\caches\transforms-3\d035540ab5f21da1680139de3043fa0c\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:30:13-37
+104
+105        <provider
+105-->[androidx.emoji2:emoji2:1.2.0] C:\Users\ifigu\.gradle\caches\transforms-3\130de4dba8d29b32e84bd9cd876377f3\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
+106            android:name="androidx.startup.InitializationProvider"
+106-->[androidx.emoji2:emoji2:1.2.0] C:\Users\ifigu\.gradle\caches\transforms-3\130de4dba8d29b32e84bd9cd876377f3\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:25:13-67
+107            android:authorities="com.example.google_fit_test_task.androidx-startup"
+107-->[androidx.emoji2:emoji2:1.2.0] C:\Users\ifigu\.gradle\caches\transforms-3\130de4dba8d29b32e84bd9cd876377f3\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:26:13-68
+108            android:exported="false" >
+108-->[androidx.emoji2:emoji2:1.2.0] C:\Users\ifigu\.gradle\caches\transforms-3\130de4dba8d29b32e84bd9cd876377f3\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:27:13-37
+109            <meta-data
+109-->[androidx.emoji2:emoji2:1.2.0] C:\Users\ifigu\.gradle\caches\transforms-3\130de4dba8d29b32e84bd9cd876377f3\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
+110                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+110-->[androidx.emoji2:emoji2:1.2.0] C:\Users\ifigu\.gradle\caches\transforms-3\130de4dba8d29b32e84bd9cd876377f3\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:30:17-75
+111                android:value="androidx.startup" />
+111-->[androidx.emoji2:emoji2:1.2.0] C:\Users\ifigu\.gradle\caches\transforms-3\130de4dba8d29b32e84bd9cd876377f3\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:31:17-49
+112            <meta-data
+112-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\ifigu\.gradle\caches\transforms-3\739c460ec5db4253f0de317fbe632f6b\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:31:13-33:52
+113                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+113-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\ifigu\.gradle\caches\transforms-3\739c460ec5db4253f0de317fbe632f6b\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:32:17-78
+114                android:value="androidx.startup" />
+114-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\ifigu\.gradle\caches\transforms-3\739c460ec5db4253f0de317fbe632f6b\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:33:17-49
+115        </provider>
+116    </application>
+117
+118</manifest>

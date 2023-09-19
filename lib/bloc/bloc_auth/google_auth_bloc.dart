@@ -6,8 +6,8 @@ part 'google_auth_state.dart';
 
 class GoogleAuthBloc extends Bloc<GoogleAuthEvent, GoogleAuthState> {
   GoogleAuthBloc() : super(GoogleAuthInitial()) {
-    on<GoogleAuthEvent>((event, emit) {
-      
+    on<GoogleAuthEvent>((event, emit) async {
+      emit(GoogleAuthLoading());
     });
   }
 }

@@ -1,8 +1,27 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.google_fit_test_task.app-mergeDebugResources-16:/values-watch-v20/values-watch-v20.xml",
+            "outputFile": "com.example.google_fit_test_task.app-mergeDebugResources-25:/values-watch-v20/values-watch-v20.xml",
             "map": [
+                {
+                    "source": "C:\\Users\\ifigu\\.gradle\\caches\\transforms-3\\3b536009bb265140d066cf10e14e3298\\transformed\\appcompat-1.6.1\\res\\values-watch-v20\\values-watch-v20.xml",
+                    "from": {
+                        "startLines": "2,5,8",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,214,385",
+                        "endLines": "4,7,10",
+                        "endColumns": "12,12,12",
+                        "endOffsets": "209,380,553"
+                    },
+                    "to": {
+                        "startLines": "10,13,16",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "715,874,1045",
+                        "endLines": "12,15,18",
+                        "endColumns": "12,12,12",
+                        "endOffsets": "869,1040,1213"
+                    }
+                },
                 {
                     "source": "C:\\Users\\ifigu\\.gradle\\caches\\transforms-3\\2524147fbfd3c89362905112903bb3a3\\transformed\\jetified-play-services-auth-20.7.0\\res\\values-watch-v20\\values.xml",
                     "from": {
