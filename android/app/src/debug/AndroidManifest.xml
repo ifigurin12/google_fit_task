@@ -13,5 +13,8 @@
     <uses-permission
         android:name="android.permission.BIND_AUTOFILL_SERVICE"
         tools:ignore="ProtectedPermissions" />
+    <uses-permission
+        android:name="android.permission.CALL_ACTIVITY_RESULT_BEFORE_RESUME"
+        tools:ignore="ProtectedPermissions" />
 
 </manifest>

@@ -82,13 +82,23 @@ class AuthGoogleApi : FlutterActivity() {
         }
     }
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val afm = context.getSystemService(AutofillManager::class.java)
         afm?.requestAutofill(View(context))
-        /*if (!afm.showAutofillDialog(View(context), 210923482)) {
-            finish()  // Вот эта штука выдает false => нам не показывает наш диалог
-        } */
+        if (!afm.isAutofillSupported) { // true
+
+            /*if (!afm.hasEnabledAutofillServices()) // false
+            {
+                finish()
+            }*/ // Вот эти 2 проверки выдает false
+
+            /*if (!afm.showAutofillDialog(View(context))) // false
+             {
+                 finish()
+              }*/
+        }
         mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
 
     }
