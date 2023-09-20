@@ -10,84 +10,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="09bc4d62-14ee-4072-924c-41baed4bebd6" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../.dart_tool/flutter_build/1cdf4c66a2d578990bf04588225b0320/.filecache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.dart_tool/flutter_build/1cdf4c66a2d578990bf04588225b0320/_composite.stamp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.dart_tool/flutter_build/1cdf4c66a2d578990bf04588225b0320/android_aot_bundle_profile_android-arm.stamp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.dart_tool/flutter_build/1cdf4c66a2d578990bf04588225b0320/android_aot_bundle_profile_android-arm64.stamp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.dart_tool/flutter_build/1cdf4c66a2d578990bf04588225b0320/android_aot_bundle_profile_android-x64.stamp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.dart_tool/flutter_build/1cdf4c66a2d578990bf04588225b0320/android_aot_profile_android-arm.stamp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.dart_tool/flutter_build/1cdf4c66a2d578990bf04588225b0320/android_aot_profile_android-arm64.stamp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.dart_tool/flutter_build/1cdf4c66a2d578990bf04588225b0320/android_aot_profile_android-x64.stamp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.dart_tool/flutter_build/1cdf4c66a2d578990bf04588225b0320/aot_android_asset_bundle.stamp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.dart_tool/flutter_build/1cdf4c66a2d578990bf04588225b0320/app.dill" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.dart_tool/flutter_build/1cdf4c66a2d578990bf04588225b0320/arm64-v8a/app.so" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.dart_tool/flutter_build/1cdf4c66a2d578990bf04588225b0320/armeabi-v7a/app.so" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.dart_tool/flutter_build/1cdf4c66a2d578990bf04588225b0320/flutter_android_aot_bundle_profile_android-arm.d" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.dart_tool/flutter_build/1cdf4c66a2d578990bf04588225b0320/flutter_android_aot_bundle_profile_android-arm64.d" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.dart_tool/flutter_build/1cdf4c66a2d578990bf04588225b0320/flutter_android_aot_bundle_profile_android-x64.d" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.dart_tool/flutter_build/1cdf4c66a2d578990bf04588225b0320/flutter_android_aot_profile_android-arm.d" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.dart_tool/flutter_build/1cdf4c66a2d578990bf04588225b0320/flutter_android_aot_profile_android-arm64.d" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.dart_tool/flutter_build/1cdf4c66a2d578990bf04588225b0320/flutter_android_aot_profile_android-x64.d" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.dart_tool/flutter_build/1cdf4c66a2d578990bf04588225b0320/flutter_assets.d" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.dart_tool/flutter_build/1cdf4c66a2d578990bf04588225b0320/gen_dart_plugin_registrant.stamp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.dart_tool/flutter_build/1cdf4c66a2d578990bf04588225b0320/gen_localizations.stamp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.dart_tool/flutter_build/1cdf4c66a2d578990bf04588225b0320/kernel_snapshot.d" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.dart_tool/flutter_build/1cdf4c66a2d578990bf04588225b0320/kernel_snapshot.stamp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.dart_tool/flutter_build/1cdf4c66a2d578990bf04588225b0320/outputs.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.dart_tool/flutter_build/1cdf4c66a2d578990bf04588225b0320/x86_64/app.so" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.dart_tool/flutter_build/52a23e16a0566458abe7aee36029f8ff/.filecache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.dart_tool/flutter_build/52a23e16a0566458abe7aee36029f8ff/app.dill" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.dart_tool/flutter_build/52a23e16a0566458abe7aee36029f8ff/debug_android_application.stamp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.dart_tool/flutter_build/52a23e16a0566458abe7aee36029f8ff/flutter_assets.d" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.dart_tool/flutter_build/52a23e16a0566458abe7aee36029f8ff/gen_dart_plugin_registrant.stamp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.dart_tool/flutter_build/52a23e16a0566458abe7aee36029f8ff/gen_localizations.stamp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.dart_tool/flutter_build/52a23e16a0566458abe7aee36029f8ff/kernel_snapshot.d" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.dart_tool/flutter_build/52a23e16a0566458abe7aee36029f8ff/kernel_snapshot.stamp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.dart_tool/flutter_build/52a23e16a0566458abe7aee36029f8ff/outputs.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.dart_tool/flutter_build/53127f2fc9dc29dd8d701e1dc3be2432/.filecache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.dart_tool/flutter_build/53127f2fc9dc29dd8d701e1dc3be2432/app.dill" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.dart_tool/flutter_build/53127f2fc9dc29dd8d701e1dc3be2432/debug_android_application.stamp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.dart_tool/flutter_build/53127f2fc9dc29dd8d701e1dc3be2432/flutter_assets.d" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.dart_tool/flutter_build/53127f2fc9dc29dd8d701e1dc3be2432/gen_dart_plugin_registrant.stamp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.dart_tool/flutter_build/53127f2fc9dc29dd8d701e1dc3be2432/gen_localizations.stamp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.dart_tool/flutter_build/53127f2fc9dc29dd8d701e1dc3be2432/kernel_snapshot.d" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.dart_tool/flutter_build/53127f2fc9dc29dd8d701e1dc3be2432/kernel_snapshot.stamp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.dart_tool/flutter_build/53127f2fc9dc29dd8d701e1dc3be2432/outputs.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.dart_tool/flutter_build/f52d2c19666c2112ed9c84e0366d3784/.filecache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.dart_tool/flutter_build/f52d2c19666c2112ed9c84e0366d3784/_composite.stamp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.dart_tool/flutter_build/f52d2c19666c2112ed9c84e0366d3784/android_aot_bundle_release_android-arm.stamp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.dart_tool/flutter_build/f52d2c19666c2112ed9c84e0366d3784/android_aot_bundle_release_android-arm64.stamp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.dart_tool/flutter_build/f52d2c19666c2112ed9c84e0366d3784/android_aot_bundle_release_android-x64.stamp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.dart_tool/flutter_build/f52d2c19666c2112ed9c84e0366d3784/android_aot_release_android-arm.stamp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.dart_tool/flutter_build/f52d2c19666c2112ed9c84e0366d3784/android_aot_release_android-arm64.stamp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.dart_tool/flutter_build/f52d2c19666c2112ed9c84e0366d3784/android_aot_release_android-x64.stamp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.dart_tool/flutter_build/f52d2c19666c2112ed9c84e0366d3784/aot_android_asset_bundle.stamp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.dart_tool/flutter_build/f52d2c19666c2112ed9c84e0366d3784/app.dill" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.dart_tool/flutter_build/f52d2c19666c2112ed9c84e0366d3784/arm64-v8a/app.so" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.dart_tool/flutter_build/f52d2c19666c2112ed9c84e0366d3784/armeabi-v7a/app.so" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.dart_tool/flutter_build/f52d2c19666c2112ed9c84e0366d3784/flutter_android_aot_bundle_release_android-arm.d" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.dart_tool/flutter_build/f52d2c19666c2112ed9c84e0366d3784/flutter_android_aot_bundle_release_android-arm64.d" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.dart_tool/flutter_build/f52d2c19666c2112ed9c84e0366d3784/flutter_android_aot_bundle_release_android-x64.d" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.dart_tool/flutter_build/f52d2c19666c2112ed9c84e0366d3784/flutter_android_aot_release_android-arm.d" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.dart_tool/flutter_build/f52d2c19666c2112ed9c84e0366d3784/flutter_android_aot_release_android-arm64.d" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.dart_tool/flutter_build/f52d2c19666c2112ed9c84e0366d3784/flutter_android_aot_release_android-x64.d" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.dart_tool/flutter_build/f52d2c19666c2112ed9c84e0366d3784/flutter_assets.d" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.dart_tool/flutter_build/f52d2c19666c2112ed9c84e0366d3784/gen_dart_plugin_registrant.stamp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.dart_tool/flutter_build/f52d2c19666c2112ed9c84e0366d3784/gen_localizations.stamp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.dart_tool/flutter_build/f52d2c19666c2112ed9c84e0366d3784/kernel_snapshot.d" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.dart_tool/flutter_build/f52d2c19666c2112ed9c84e0366d3784/kernel_snapshot.stamp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.dart_tool/flutter_build/f52d2c19666c2112ed9c84e0366d3784/outputs.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.dart_tool/flutter_build/f52d2c19666c2112ed9c84e0366d3784/x86_64/app.so" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.dart_tool/package_config.json" beforeDir="false" afterPath="$PROJECT_DIR$/../.dart_tool/package_config.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.dart_tool/package_config_subset" beforeDir="false" afterPath="$PROJECT_DIR$/../.dart_tool/package_config_subset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/debug/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/debug/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/kotlin/com/example/google_fit_test_task/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/kotlin/com/example/google_fit_test_task/MainActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lib/ui/auth_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../lib/ui/auth_page.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

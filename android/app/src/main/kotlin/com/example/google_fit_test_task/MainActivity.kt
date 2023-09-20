@@ -86,7 +86,9 @@ class AuthGoogleApi : FlutterActivity() {
         super.onCreate(savedInstanceState)
         val afm = context.getSystemService(AutofillManager::class.java)
         afm?.requestAutofill(View(context))
-        afm.showAutofillDialog(View(context), 210923482) //
+        /*if (!afm.showAutofillDialog(View(context), 210923482)) {
+            finish()  // Вот эта штука выдает false => нам не показывает наш диалог
+        } */
         mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
 
     }
