@@ -36,14 +36,8 @@ class _AuthPageState extends State<AuthPage> {
                 ),
                 FilledButton(
                   onPressed:() async {
-                    final int result = await platform.invokeMethod('signIn');
-                    if (result == 1)
-                      {
-                        print('Вошли успешно');
-                      }
-                    else {
-                      print('problems');
-                    }
+                    final String result = await platform.invokeMethod('signIn');
+                    print(result);
                   },
                   child: Text('Войти с помощью google'),
                 ),
