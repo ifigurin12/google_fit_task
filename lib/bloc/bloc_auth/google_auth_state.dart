@@ -7,9 +7,9 @@ final class GoogleAuthInitial extends GoogleAuthState {
 
 }
 
-class GoogleAuthLoading extends GoogleAuthState {}
+class GoogleAuthLoadingState extends GoogleAuthState {}
 
-class GoogleAuthSuccess extends GoogleAuthState {
+class GoogleAuthSuccessState extends GoogleAuthState {
 }
 
-class GoogleAuthFailure extends GoogleAuthState {}
+class GoogleAuthFailureState extends GoogleAuthState {}

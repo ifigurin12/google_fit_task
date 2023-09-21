@@ -18,7 +18,7 @@ import io.flutter.plugin.common.MethodChannel
 
 
 class MainActivity: FlutterActivity() {
-    private val CHANNEL_AUTH = "auth_google"
+    private val CHANNEL_AUTH = "google_auth"
 
     val GOOGLE_FIT_PERMISSIONS_REQUEST_CODE = 11
 
@@ -27,7 +27,6 @@ class MainActivity: FlutterActivity() {
         .addDataType(DataType.TYPE_STEP_COUNT_DELTA, FitnessOptions.ACCESS_READ)
         .addDataType(DataType.TYPE_WEIGHT, FitnessOptions.ACCESS_READ)
         .build()
-    var account : GoogleSignInAccount? = null;
 
     override fun configureFlutterEngine(@NonNull flutterEngine: FlutterEngine) {
         super.configureFlutterEngine(flutterEngine)
@@ -36,7 +35,7 @@ class MainActivity: FlutterActivity() {
             CHANNEL_AUTH
         ).setMethodCallHandler { call, result ->
             if (call.method == "signIn") {
-                account = GoogleSignIn.getAccountForExtension(this, fitnessOptions)
+                val account = GoogleSignIn.getAccountForExtension(this, fitnessOptions)
                 if (!GoogleSignIn.hasPermissions(account, fitnessOptions)) {
                     GoogleSignIn.requestPermissions(
                         this,
@@ -45,22 +44,23 @@ class MainActivity: FlutterActivity() {
                         fitnessOptions
                     )
                 }
-                if (accountCheck())
-                {
-                    result.success(true)
-                }
-                else
-                {
-                    result.success(false)
-                }
+
+            }
+            else if (call.method == "isSignedIn") {
+                result.success(accountCheck())
             }
         }
     }
-
-    fun accountCheck(): Boolean {
+    private fun accountCheck(): Boolean {
+        val account = getGoogleAccount()
         return account != null && GoogleSignIn.hasPermissions(account, fitnessOptions)
     }
+    private fun exitFromGoogleAccount() {
+        val account = getGoogleAccount()
+        ;
 
+    }
+    private fun getGoogleAccount() = GoogleSignIn.getAccountForExtension(this, fitnessOptions)
 }
 
 
