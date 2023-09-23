@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fit_test_task/bloc/bloc_auth/google_auth_bloc.dart';
+import 'package:google_fit_test_task/bloc/bloc_fintess/fitness_bloc.dart';
 import 'package:google_fit_test_task/ui/pages/auth_page.dart';
 
 class HomePage extends StatefulWidget {
@@ -17,7 +18,9 @@ class _HomePageState extends State<HomePage> {
         title: Text('HomePage'),
         actions: [
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              BlocProvider.of<GoogleAuthBloc>(context).add(GoogleSignOutEvent());
+            },
             icon: Icon(Icons.exit_to_app),
           ),
         ],
@@ -41,8 +44,7 @@ class _HomePageState extends State<HomePage> {
           } else if (state is GoogleAuthFailureState) {
             Navigator.of(context)
                 .pushNamedAndRemoveUntil(AuthPage.routeName, (route) => false);
-          }
-          else if (state is GoogleAuthSuccessState) {
+          } else if (state is GoogleAuthSuccessState) {
             ScaffoldMessenger.of(context).showSnackBar(
               const SnackBar(
                 duration: Duration(seconds: 1),
@@ -57,9 +59,25 @@ class _HomePageState extends State<HomePage> {
                 ),
               ),
             );
+            BlocProvider.of<FitnessBloc>(context).add(FitnessCountData());
           }
         },
-        child: Center(child: Text('HomePage')),
+        child: BlocBuilder<FitnessBloc, FitnessState>(
+          builder: (context, state) {
+            if (state is FitnessDataLoadingState || state is FitnessInitial) {
+              return const Center(
+                child: CircularProgressIndicator(),
+              );
+            }
+            else if (state is FitnessDataSuccessState)
+            {
+              return Text('Получилось');
+            }
+            else {
+              return Text('Ошибка');
+            }
+          },
+        ),
       ),
     );
   }
