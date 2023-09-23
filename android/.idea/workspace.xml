@@ -10,20 +10,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="09bc4d62-14ee-4072-924c-41baed4bebd6" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../.dart_tool/flutter_build/91bddc362d18191ea5e6118dae4f6598/.filecache" beforeDir="false" afterPath="$PROJECT_DIR$/../.dart_tool/flutter_build/91bddc362d18191ea5e6118dae4f6598/.filecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.dart_tool/flutter_build/91bddc362d18191ea5e6118dae4f6598/app.dill" beforeDir="false" afterPath="$PROJECT_DIR$/../.dart_tool/flutter_build/91bddc362d18191ea5e6118dae4f6598/app.dill" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.dart_tool/flutter_build/91bddc362d18191ea5e6118dae4f6598/kernel_snapshot.d" beforeDir="false" afterPath="$PROJECT_DIR$/../.dart_tool/flutter_build/91bddc362d18191ea5e6118dae4f6598/kernel_snapshot.d" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.dart_tool/flutter_build/91bddc362d18191ea5e6118dae4f6598/kernel_snapshot.stamp" beforeDir="false" afterPath="$PROJECT_DIR$/../.dart_tool/flutter_build/91bddc362d18191ea5e6118dae4f6598/kernel_snapshot.stamp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.dart_tool/flutter_build/cdf02c0d0059de75e8fb67a674412513/.filecache" beforeDir="false" afterPath="$PROJECT_DIR$/../.dart_tool/flutter_build/cdf02c0d0059de75e8fb67a674412513/.filecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.dart_tool/flutter_build/cdf02c0d0059de75e8fb67a674412513/app.dill" beforeDir="false" afterPath="$PROJECT_DIR$/../.dart_tool/flutter_build/cdf02c0d0059de75e8fb67a674412513/app.dill" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.dart_tool/flutter_build/cdf02c0d0059de75e8fb67a674412513/kernel_snapshot.d" beforeDir="false" afterPath="$PROJECT_DIR$/../.dart_tool/flutter_build/cdf02c0d0059de75e8fb67a674412513/kernel_snapshot.d" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.dart_tool/flutter_build/cdf02c0d0059de75e8fb67a674412513/kernel_snapshot.stamp" beforeDir="false" afterPath="$PROJECT_DIR$/../.dart_tool/flutter_build/cdf02c0d0059de75e8fb67a674412513/kernel_snapshot.stamp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/kotlin/com/example/google_fit_test_task/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/kotlin/com/example/google_fit_test_task/MainActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lib/bloc/bloc_auth/google_auth_bloc.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../lib/bloc/bloc_auth/google_auth_bloc.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lib/bloc/bloc_auth/google_auth_event.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../lib/bloc/bloc_auth/google_auth_event.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../lib/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lib/ui/pages/home_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../lib/ui/pages/home_page.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
