@@ -1,6 +1,7 @@
 package com.example.google_fit_test_task
 
 import android.Manifest
+import android.content.Intent
 import android.content.pm.PackageManager
 import android.util.Log
 import androidx.annotation.NonNull
@@ -9,12 +10,14 @@ import androidx.core.content.ContextCompat
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
+import com.google.android.gms.common.api.ApiException
 import com.google.android.gms.fitness.Fitness
 import com.google.android.gms.fitness.FitnessOptions
 import com.google.android.gms.fitness.data.DataSet
 import com.google.android.gms.fitness.data.DataType
 import com.google.android.gms.fitness.request.DataReadRequest
 import com.google.android.gms.tasks.Task
+import com.google.android.gms.tasks.Tasks.await
 import io.flutter.embedding.android.FlutterActivity
 import io.flutter.embedding.engine.FlutterEngine
 import io.flutter.plugin.common.MethodChannel
@@ -36,7 +39,7 @@ class MainActivity: FlutterActivity() {
         .addDataType(DataType.AGGREGATE_STEP_COUNT_DELTA, FitnessOptions.ACCESS_READ)
         .build()
     val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-        .requestIdToken("460023958134-hovmn9ka16d6t0oveur4b6o48hrpgki5.apps.googleusercontent.com")
+        .requestIdToken("460023958134-3uint7uu5uksnq6b5snq17rougpqaqv8.apps.googleusercontent.com")
         .addExtension(fitnessOptions)
         .requestEmail()
         .build()
@@ -49,16 +52,9 @@ class MainActivity: FlutterActivity() {
             CHANNEL_AUTH
         ).setMethodCallHandler { call, result ->
             if (call.method == "signIn") {
-                val account = getGoogleAccount()
-                if (signIn())
-                    {
-                        result.success(true)
-                    }
-
-
-                else {
-                    result.success(false)
-                }
+                signIn()
+                Log.i("SIGN_IN_METHOD", "AccCheck: ${accountCheck().toString()}")
+                result.success(accountCheck())
 
             }
             else if (call.method == "isSignedIn") {
@@ -83,22 +79,43 @@ class MainActivity: FlutterActivity() {
         }
     }
 
-    private fun signIn(): Boolean{
+    private fun signIn() {
         val client = GoogleSignIn.getClient(this, gso)
-        val task: Task<GoogleSignInAccount> = client.silentSignIn()
-        if (task.isSuccessful) {
-            GoogleSignIn.requestPermissions(
-                this,
-                GOOGLE_FIT_PERMISSIONS_REQUEST_CODE,
-                getGoogleAccount(),
-                fitnessOptions
-            )
-            return true;
-        } else {
-           return false;
+        val signInIntent: Intent = client.getSignInIntent()
+        startActivityForResult(signInIntent, 1)
+    }
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+
+        // Result returned from launching the Intent from GoogleSignInClient.getSignInIntent(...);
+        if (requestCode == 1) {
+            // The Task returned from this call is always completed, no need to attach
+            // a listener.
+            val task = GoogleSignIn.getSignedInAccountFromIntent(data)
+            try {
+                val account = task.getResult(ApiException::class.java)
+                Log.i("SIGN_IN", "Успешно вошли")
+
+            } catch (e: ApiException) {
+                // The ApiException status code indicates the detailed failure reason.
+                // Please refer to the GoogleSignInStatusCodes class reference for more information.
+                Log.w("ERROR_SIGN_IN", "signInResult:failed code=" + e.statusCode)
+
+            }
         }
     }
+    private fun handleSignInResult(completedTask: Task<GoogleSignInAccount>) {
+        try {
+            val account = completedTask.getResult(ApiException::class.java)
+            Log.i("SIGN_IN", "Успешно вошли")
 
+        } catch (e: ApiException) {
+            // The ApiException status code indicates the detailed failure reason.
+            // Please refer to the GoogleSignInStatusCodes class reference for more information.
+            Log.w("ERROR_SIGN_IN", "signInResult:failed code=" + e.statusCode)
+
+        }
+    }
     private fun getGoogleAccount() = GoogleSignIn.getAccountForExtension(this, fitnessOptions);//
     private fun accountCheck(): Boolean {
         val account = getGoogleAccount()
@@ -108,14 +125,16 @@ class MainActivity: FlutterActivity() {
     {
         val client = GoogleSignIn.getClient(this, gso)
         var isSignOut = false;
-        client.signOut()
+        Fitness.getConfigClient(this,  GoogleSignIn.getAccountForExtension(this, fitnessOptions))
+            .disableFit()
             .addOnSuccessListener {
-                Log.i("SIGN_OUT", "Удалось выйти")
-                isSignOut = true
+                client.revokeAccess()
+                client.signOut()
+                isSignOut = true;
+                Log.i("SIGN_OUT_SUCC", "Da ${isSignOut.toString()}?")
             }
-            .addOnFailureListener { _ ->
-                isSignOut = true
-                Log.i("SIGN_OUT", "Удалось выйти")
+            .addOnFailureListener { e ->
+                Log.w("SIGN_OUT_ERROR","There was an error disabling Google Fit", e)
             }
         return isSignOut
     }
@@ -128,15 +147,14 @@ class MainActivity: FlutterActivity() {
         val startSeconds = start.atZone(ZoneId.systemDefault()).toEpochSecond()
 
         val readRequest = DataReadRequest.Builder()
-            .aggregate(DataType.TYPE_HEART_RATE_BPM)
+            .aggregate(DataType.TYPE_WEIGHT)
             .setTimeRange(startSeconds, endSeconds, TimeUnit.DAYS)
             .bucketByTime(1, TimeUnit.DAYS)
             .build()
-        val account = GoogleSignIn.getAccountForExtension(this, fitnessOptions)
-        val response = Fitness.getHistoryClient(this, account)
+        val response = Fitness.getHistoryClient(this, getGoogleAccount())
             .readData(readRequest)
             .addOnSuccessListener { response ->
-               dumpDataSet(response.getDataSet(DataType.TYPE_HEART_RATE_BPM))
+               dumpDataSet(response.getDataSet(DataType.TYPE_WEIGHT))
 
             }
     }
