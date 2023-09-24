@@ -7,11 +7,14 @@ import androidx.annotation.NonNull
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import com.google.android.gms.auth.api.signin.GoogleSignIn
+import com.google.android.gms.auth.api.signin.GoogleSignInAccount
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.android.gms.fitness.Fitness
 import com.google.android.gms.fitness.FitnessOptions
 import com.google.android.gms.fitness.data.DataSet
 import com.google.android.gms.fitness.data.DataType
 import com.google.android.gms.fitness.request.DataReadRequest
+import com.google.android.gms.tasks.Task
 import io.flutter.embedding.android.FlutterActivity
 import io.flutter.embedding.engine.FlutterEngine
 import io.flutter.plugin.common.MethodChannel
@@ -30,7 +33,14 @@ class MainActivity: FlutterActivity() {
         .addDataType(DataType.TYPE_HEART_RATE_BPM, FitnessOptions.ACCESS_READ)
         .addDataType(DataType.TYPE_STEP_COUNT_DELTA, FitnessOptions.ACCESS_READ)
         .addDataType(DataType.TYPE_WEIGHT, FitnessOptions.ACCESS_READ)
+        .addDataType(DataType.AGGREGATE_STEP_COUNT_DELTA, FitnessOptions.ACCESS_READ)
         .build()
+    val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+        .requestIdToken("460023958134-hovmn9ka16d6t0oveur4b6o48hrpgki5.apps.googleusercontent.com")
+        .addExtension(fitnessOptions)
+        .requestEmail()
+        .build()
+
 
     override fun configureFlutterEngine(@NonNull flutterEngine: FlutterEngine) {
         super.configureFlutterEngine(flutterEngine)
@@ -39,16 +49,17 @@ class MainActivity: FlutterActivity() {
             CHANNEL_AUTH
         ).setMethodCallHandler { call, result ->
             if (call.method == "signIn") {
-                val account = GoogleSignIn.getAccountForExtension(this, fitnessOptions)
-                if (!accountCheck()) {
-                    GoogleSignIn.requestPermissions(
-                        this,
-                        GOOGLE_FIT_PERMISSIONS_REQUEST_CODE,
-                        account,
-                        fitnessOptions
-                    )
+                val account = getGoogleAccount()
+                if (signIn())
+                    {
+                        result.success(true)
+                    }
+
+
+                else {
+                    result.success(false)
                 }
-                result.success(accountCheck())
+
             }
             else if (call.method == "isSignedIn") {
                 result.success(accountCheck())
@@ -72,16 +83,32 @@ class MainActivity: FlutterActivity() {
         }
     }
 
-    private fun getGoogleAccount() = GoogleSignIn.getAccountForExtension(this, fitnessOptions)
+    private fun signIn(): Boolean{
+        val client = GoogleSignIn.getClient(this, gso)
+        val task: Task<GoogleSignInAccount> = client.silentSignIn()
+        if (task.isSuccessful) {
+            GoogleSignIn.requestPermissions(
+                this,
+                GOOGLE_FIT_PERMISSIONS_REQUEST_CODE,
+                getGoogleAccount(),
+                fitnessOptions
+            )
+            return true;
+        } else {
+           return false;
+        }
+    }
+
+    private fun getGoogleAccount() = GoogleSignIn.getAccountForExtension(this, fitnessOptions);//
     private fun accountCheck(): Boolean {
         val account = getGoogleAccount()
         return account != null && GoogleSignIn.hasPermissions(account, fitnessOptions)
     }
     private fun signOutFromGoogleFit() : Boolean
     {
+        val client = GoogleSignIn.getClient(this, gso)
         var isSignOut = false;
-        Fitness.getConfigClient(this, getGoogleAccount())
-            .disableFit()
+        client.signOut()
             .addOnSuccessListener {
                 Log.i("SIGN_OUT", "Удалось выйти")
                 isSignOut = true
